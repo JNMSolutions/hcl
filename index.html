@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://use.typekit.net/caa4wqv.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<meta charset="utf-8">
+	<meta name="description" content="His Church London">
+	<meta name="keywords" content="church, london, christian, jesus">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta name="twitter:card" content="summary">
+	<meta property="og:url" content="http://www.hischurchlondon.co.uk">
+	<meta property="og:title" content="His Church London">
+	<meta property="og:description" content="His Church London">
+	<meta property="og:image" >
+	<title>His Church London</title>
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+	<link rel='mask-icon' href='images/favicon.svg' color='#000000'>
+	<link rel="apple-touch-icon-precomposed" href="images/favicon-152.png">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<header>
+		<div class="header-wrapper">
+			<div class="title">
+				<a href="https://hischurch.co.uk/"><img class="header-logo" src="images/logo.svg" alt="His Church" /></a>
+				<h1 class="hidden">His Church London</h1>
+			</div>
+			<nav class="navigation">
+				<ul>
+					<li class="active"><a href="https://hischurch.co.uk/">Home</a></li>
+					<li><a href="about">About</a></li>
+					<li><a href="kids">Kids church</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="hero">
+		<h2>Welcome</h2>
+	</div>
+
+	<main>
+
+		<section role="About us">
+			<div class="row">
+				<div class="medium-12 large-9 columns">
+					<p>We are so glad you are here.</p>
+					<p>His Church London is a family church and we believe Church is for everyone no matter your age or your life story.</p>
+					<p>We are passionate about helping people find life, hope and purpose in Jesus. We are excited about all that God has in store for you.</p>
+					<p>You are so welcome here.</p>
+				</div>
+			</div>
+		</section>
+
+		<section role="About us">
+			<div class="row">
+				<div class="large-3 medium-3 columns">
+					<img src="images/people/people_1.jpg" alt="4 women smiling" />
+				</div>
+				<div class="large-3 medium-3 columns">
+					<img src="images/people/people_2.jpg" alt="4 children on climbing equipment smiling" />
+				</div>
+				<div class="large-3 medium-3 columns">
+					<img src="images/people/people_3.jpg" alt="2 women smiling" />
+				</div>
+				<div class="large-3 medium-3 columns">
+					<img src="images/people/people_4.jpg" alt="4 children on climbing equipment smiling" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-3 medium-3 columns">
+					<img src="images/people/people_5.jpg" alt="3 children close to the camera with big smiles" />
+				</div>
+				<div class="large-3 medium-3 columns">
+					<img src="images/people/people_6.jpg" alt="5 men standing in a line smiling" />
+				</div>
+				<div class="large-3 medium-3 columns">
+					<img src="images/people/people_7.jpg" alt="1 child smiling" />
+				</div>
+				<div class="large-3 medium-3 columns">
+					<img src="images/people/people_8.jpg" alt="2 people smiling" />
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="row">
+				<div class="small-12 large-9 columns">
+					<h2 class="heading-large">Service Times</h2>
+					<p>We meet every Sunday at:</p>
+					<p>Fern Hill Primary School, Kingston upon Thames, KT2 5PE<br>
+					10 AM</p>
+					<p>We can’t wait to meet you!</p>
+				</div>
+			</div>
+		</section>
+
+		<div class="map-wrapper">
+			<div id='map'></div>
+		</div>
+
+	</main>
+
+	<footer>
+		<div class="row">
+			<div class="medium-12 large-12 columns">
+				<div class="verse">
+					<p>"We preach to awaken hearts and bring everyone into the full understanding of truth in Jesus."
+					<br>Col 1:28-29</p>
+				</div>
+				<p>His Church London<br>Fern Hill Primary School, Kingston upon Thames, KT2 5PE</p>
+				<p>Email us: <a href="mailto:hischurch@hischurchlondon.co.uk">hischurch@hischurchlondon.co.uk</a></p>
+				<p class="copywrite">&copy; 2021 | Hand crafted</p>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+	mapboxgl.accessToken = 'pk.eyJ1Ijoib3dlbm02IiwiYSI6ImNqNWlnbnF2NDFueGwyeHF4NXJ0cTlpOHgifQ.LuirYNoDwx769ixXVDCDhQ';
+
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/mapbox/light-v9',
+		center: [-0.301824, 51.423404],
+		zoom: 11,
+		interactive: false
+	});
+
+	var geojson = {
+		type: 'FeatureCollection',
+		features: [{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [-0.301824, 51.423404]
+			},
+			properties: {
+				title: 'His Church',
+				description: 'His Church London'
+			}
+		}]
+	};
+
+	// add markers to map
+	geojson.features.forEach(function(marker) {
+
+		// create a HTML element for each feature
+		var el = document.createElement('div');
+		el.className = 'marker';
+
+		// make a marker for each feature and add to the map
+		new mapboxgl.Marker(el, { offset: [-50 / 2, -50 / 2] })
+		.setLngLat(marker.geometry.coordinates)
+		.addTo(map);
+	});
+
+	map.scrollZoom.disable();
+	map.addControl(new mapboxgl.NavigationControl());
+	if (map.tap) map.tap.disable();
+
+	</script>
+</body>
+</html>
