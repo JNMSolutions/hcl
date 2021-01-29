@@ -1,0 +1,32 @@
+.hero {
+  background-image: url('../images/rain.jpg');
+  background-color: $black;
+  color: $white;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60vh;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 25px #000;;
+    font-family: 'futura-pt-bold', "Helvetica Neue", Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 45em) {
+  .hero {
+    height: 50vh;
+
+
+    h2 {
+      font-size: 3.5rem;
+    }
+  }
+}

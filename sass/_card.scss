@@ -1,0 +1,25 @@
+.card {
+  background: $white;
+  border: $midgrey 2px solid;
+  display: inline-block;
+  height: auto;
+  padding: 1rem;
+  position: relative;
+  width: 95%;
+  margin-top: 0.4rem;
+
+  p {
+    margin-top: 0.4rem;
+  }
+}
+
+@media (max-width: 45em) {
+  .card {
+    width: 100%;
+
+    p {
+      margin-top: 0.2rem;
+    }
+  }
+
+}

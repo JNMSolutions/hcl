@@ -1,0 +1,63 @@
+details {
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-bottom: 1px solid $midgrey;
+  padding: 0.5rem 0;
+}
+
+summary {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 700;
+  font-family: 'futura-pt-bold', "Helvetica Neue", Helvetica, sans-serif;
+}
+
+details:focus {
+  border: 1px solid $midgrey;
+  outline: none !important;
+}
+
+summary:focus {
+  // border: 1px solid $darkgrey;
+  outline: none !important;
+  // box-shadow: 0 0 10px $midgrey;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary:before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    content: "";
+    background-image: url(../images/chevron.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+details[open] summary:before {
+    transform: rotate(90deg);
+    transition: all .2s ease-out;
+
+}
+
+@media (max-width: 45em) {
+
+  summary {
+    font-size: 1.4rem;
+  }
+
+  details summary:before {
+    background-size: 92%;
+    width: 15px;
+    height: 15px;
+  }
+
+  details {
+    font-size: 1.4rem;
+  }
+
+}

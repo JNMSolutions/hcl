@@ -1,0 +1,153 @@
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: 'futura-pt-bold', "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.heading-large, .heading-medium, .heading-small {
+  font-weight: 700;
+  font-family: 'futura-pt-bold', "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.heading-large {
+  font-size: 2.8rem;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.subtitle {
+  font-size: 2.3rem;
+  line-height: 1.11111;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 2rem;
+  color: #6f777b;
+}
+
+.heading-medium {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.heading-small {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.details-header {
+  margin-bottom: 0.75rem;
+}
+
+body {
+  font-family: 'franklin-gothic-urw-comp', "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+main {
+  font-size: 1.8rem;
+  line-height: 1.35;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  border-bottom: 2px $black solid;
+}
+
+a:hover {
+  border-bottom: 2px $yellow solid;
+}
+
+.card {
+  p {
+    font-size: 1.35rem;
+    margin-bottom: 0;
+  }
+
+  .heading-small {
+    margin-top: 0.5rem;
+  }
+}
+
+.verse {
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+  }
+
+  .book {
+    color: $lightgrey;
+  }
+}
+
+.tags {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+footer {
+
+  p {
+    font-size: 1.05rem;
+    padding-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .copywrite {
+    font-size: 0.8rem;
+  }
+
+}
+
+@media (max-width: 45em) {
+
+  .subtitle {
+    font-size: 1.8rem;
+  }
+
+  .intro p {
+    font-size: 1.6rem;
+  }
+
+  section {
+    font-size: 1.4rem;
+  }
+
+  .verse {
+    .book {
+      font-size: 1rem;
+    }
+  }
+
+
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .heading-large {
+    font-size: 1.8rem;
+  }
+
+  .heading-medium {
+    font-size: 1.4rem;
+  }
+
+  .heading-small {
+    font-size: 1.1rem;
+  }
+
+}

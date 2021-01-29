@@ -1,0 +1,23 @@
+footer {
+  background-color: $black;
+
+  a {
+    color: $white;
+  }
+
+
+  p {
+    color: $white;
+    padding: 0;
+  }
+}
+
+.strapline {
+  letter-spacing: 0.05em;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-size: 1.35rem;
+  word-spacing: 0.5em;
+  color: $white;
+  font-weight: 700;
+}
